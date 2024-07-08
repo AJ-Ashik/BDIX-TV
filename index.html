@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="description" content="Watch BDIX online live TV channels with seamless streaming and high-quality video. Enjoy a wide variety of entertainment, news, sports, and more, all available for free online.">
+    	<meta name="keywords" content="BDIX live TV, Online TV streaming, Live TV channels, Free BDIX TV, High-quality TV streaming, BDIX entertainment, BDIX sports channels, BDIX, bd iptv, live tv, somoy tv, news, live, tv">
+    	<meta name="author" content="BDIX Online TV">
+    	<meta name="robots" content="index, follow">
+    	<link rel="canonical" href="https://aj-ashik.github.io/AJ-Ashik/">
+    
+    	<link rel="icon" href="favicon.jpg" type="jpg">
+    	
+    <title>BDIX LIVE TV</title>
+    <style>
+    	  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+/* variables  */
+:root{
+    --main-color: #ff2c1f;
+    --text-color: #020307;
+    --bg-color: #fff;
+}
+
+body{
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 100px;
+    transition: 0.5s;
+    /* background: var(--main-color); */
+}
+header.shadow{
+    background: var(--bg-color);
+    box-shadow: 0 0 4px rgb(14 55 54/15%);
+}
+header.shadow .navbar a{
+    color: var(--text-color);
+}
+header.shadow .logo{
+    color: var(--text-color);
+}
+
+
+.logo{
+    font-size: 1.1rem;
+    font-weight: 600;
+    align-items: center;
+    color: var(--bg-color);
+    display: flex;
+    column-gap: 0.5rem;
+}
+.bx{
+    color: var(--main-color);
+}
+.navbar{
+    display: flex;
+    column-gap: 5rem;
+}
+.navbar li{
+    position: relative;
+}
+.navbar a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--bg-color);
+}
+.navbar a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.4s all linear;
+}
+.navbar a:hover::after,
+.navbar .home-active::after{
+    width: 100%;
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000001;
+    display: none;
+}
+.btn{
+    padding: 0.7rem 1.4rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-weight: 400;
+    border-radius: 0.5rem;
+}
+.btn:hover{
+    background: #fa1216;
+}
+
+/* Home  */
+section{
+    padding: 4.5rem 0 1.5rem;
+}
+.container{
+    width: 100%;
+    min-height: 640px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgb(2, 3, 7,0.5);
+}
+.container img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+.swiper-pagination-bullet{
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 0.2rem !important;
+    background: var(--bg-color) !important;
+    opacity: 1 !important;
+}
+.swiper-pagination-bullet-active{
+    width: 1.5rem !important;
+    background: var(--main-color) !important;
+}
+.home-text{
+    z-index: 1000;
+    padding: 0 150px;
+}
+.home-text span{
+    color: var(--bg-color);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.home-text h1{
+    color: var(--bg-color);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.play{
+    position: absolute;
+    right: 4rem;
+    bottom: 10%;
+}
+.play .bx{
+    background: var(--bg-color);
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 50%;
+    border: 4px solid rgb(2, 3, 7,0.5);
+    color: var(--main-color);
+}
+.play .bx:hover{
+    background: var(--main-color);
+    color: var(--bg-color);
+    transition: 0.2s all linear;
+}
+/* movies  */
+.heading{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--main-color);
+}
+.movies-container{
+    max-width: 968px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.box .box-img{
+    width: 100%;
+    height: 270px;
+    cursor: pointer;
+}
+.box .box-img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.box .box-img img:hover{
+    transform: translateY(-10px);
+    transition: 0.2s all linear;
+}
+.box h3{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.box span{
+    font-size: 14px;
+}
+
+/* coming container  */
+.coming-container{
+    display: grid;
+    gap: 1rem;
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+.coming-container .box img:hover{
+    transform: translateY(0);
+}
+.coming-container .box img{
+    border-radius: 15px;
+}
+
+
+
+/* footer  */
+.footer{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+.social .bx{
+    background: var(--bg-color);
+    padding: 2px;
+    font-size: 2rem;
+    border-radius: 50%;
+    border: 4px solid rgb(2, 3, 7,0.4);
+    color: var(--main-color);
+}
+.social .bx:hover{
+    background: var(--main-color);
+    color: var(--bg-color);
+    transition: 0.2s all linear;
+}
+
+.copyright{
+    padding: 20px;
+    text-align: center;
+    color: var(--bg-color);
+}
+
+/* responsive  */
+@media (max-width: 1080px){
+    .home-text{
+        padding: 0 100px;
+    }
+}
+@media (max-width: 991px){
+    header{
+        padding: 18px 4%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+    .home-text{
+        padding: 0 4%;
+    }
+    .home-text h1{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 774px){
+    header{
+        padding: 12px 4%;
+    }
+    #menu-icon{
+        display: initial;
+        color: var(--bg-color);
+    }
+    header.shadow #menu-icon{
+        color: var(--text-color);
+    }
+    .navbar{
+        position: absolute;
+        top: -570px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        row-gap: 1.4rem;
+        padding: 20px;
+        box-shadow: 4px 4px 0 4px rgb(14 55 54/15%);
+        transition: 0.2s all linear;
+        text-align: center;
+        width: 100%;
+    }
+    .navbar a{
+        color: var(--text-color);
+    }
+    .navbar a:hover{
+        color: var(--main-color);
+        border-bottom: 1px solid var(--main-color);
+    }
+    .navbar a::after{
+        display: none;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+    .home-text h1{
+        font-size: 2.4rem;
+    }
+    .btn{
+        padding: 0.6rem 1.2rem;
+    }
+    .movies-container{
+        grid-template-columns: repeat(auto-fit, minmax(160px,auto));
+    }
+}
+@media (max-width: 472px){
+    .newsletter form .email{
+        width: auto;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+    .container{
+        width: 100%;
+        min-height: 500px;
+    }
+    header{
+        padding: 6px 4%;
+    }
+    .home-text h1{
+        font-size: 1.7rem;
+    }
+    .play{
+        right: 2rem;
+        bottom: 8%;
+    }
+    .play .bx{
+        padding: 7px;
+    }
+    .movies-container{
+        grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+    }
+}
+    	</style>
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- Navbar  -->
+    <header>
+        <a href="index" class="logo">
+            <i class='bx bxs-movie'></i>BDIX Online TV
+        </a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <!-- menu  -->
+        <ul class="navbar">
+            <li><a href="index" class="home-active">Home</a></li>
+            <li><a href="livetv">TV Shows</a></li>
+            <li><a href="about">About Us</a></li>
+            <li><a href="contact">Contact Us</a></li>
+            <li><a href="policy">Privacy Policy</a></li>
+        </ul>
+        
+    </header>
+
+    <!-- Home  -->
+    <section class="home swiper" id="home">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide container">
+                <img src="cyber.gif" alt="">
+                <div class="home-text">
+                   <b> <span>BANGLADESHI NEWS</span></b>
+                    <h1>SOMOY NEWS<br></h1>
+                    <a href="somoy" class="btn">Watch Now</a>
+                    <a href="somoy" class="play">
+                        <i class='bx bx-play' ></i>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide container">
+               <img src="cyber.gif" alt="">
+                <div class="home-text">
+                    <b><span>Bangladeshi News</span></b>
+                    <h1>RTV News<br></h1>
+                    <a href="rtv" class="btn">Watch Now</a>
+                    <a href="rtv" class="play">
+                        <i class='bx bx-play' ></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="swiper-slide container">
+                <img src="cyber.gif" alt="">
+                <div class="home-text">
+                    <b><span>Documentary and Education</span></b>
+                    <h1>Discovery <br></h1>
+                    <a href="discovery" class="btn">Watch Now</a>
+                    <a href="discovery" class="play">
+                        <i class='bx bx-play' ></i>
+                    </a>
+                </div>
+            </div>
+            
+          </div>
+          <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- Movies  -->
+    <div class="movies" id="movies">
+        <h2 class="heading">Live TV</h2>
+        <!-- Movies container  -->
+        <div class="movies-container">
+            <!-- box-1  -->
+            <div class="box">
+                <div class="box-img">
+                	<a href="discovery">
+                    <img src="discovery.jpg" alt="">
+                </a></div>
+                <h3>Discovery</h3>
+                <span>Documentary and Education</span>
+            </div>
+            <!-- box-2  -->
+            <div class="box">
+                <div class="box-img">
+                	<a href="somoy">
+                    <img src="somoy.jpg" alt="">
+                </a></div>
+                <h3>Somoy TV</h3>
+                <span>Bangladeshi News</span>
+            </div>
+            <!-- box-3  -->
+            <div class="box">
+                <div class="box-img">
+                	<a href="rtv">
+                    <img src="rtv.jpg" alt="">
+                </a></div>
+                <h3>RTV</h3>
+                <span>Bangladeshi News</span>
+            </div>
+            <!-- box-4  -->
+            <div class="box">
+                <div class="box-img">
+                	<a href="jamuna">
+                    <img src="jamuna.png" alt="">
+                </a></div>
+                <h3>Jamuna Television</h3>
+                <span>Bangladeshi News</span>
+            </div>
+            <!-- box-5  -->
+            <div class="box">
+                <div class="box-img">
+                	<a href="channel24">
+                    <img src="channel24.jpg" alt="">
+                </a></div>
+                <h3>Channel 24</h3>
+                <span>Bangladeshi news</span>
+            </div>
+            <!-- box-6  -->
+            <div class="box">
+                <div class="box-img">
+               	<a href="9xm">
+                    <img src="9xm.png" alt="">
+                </a></div>
+                <h3>9XM </h3>
+                <span>Music</span>
+            </div>
+            <!-- box-7  -->
+            <div class="box">
+                <div class="box-img">
+                	<a href="independent">
+                    <img src="independent.png" alt="">
+                </a></div>
+                <h3>Independent News</h3>
+                <span>Bangladeshi News</span>
+            </div>
+            <!-- box-8  -->
+            <div class="box">
+                <div class="box-img">
+                	<a href="dbc">
+                    <img src="dbc.jpg" alt="">
+                </a></div>
+                <h3>DBC News</h3>
+                <span>Bangladeshi News</span>
+            </div>
+            <!-- box-9  -->
+            <div class="box">
+                <div class="box-img">
+                	<a href="zee24news">
+                    <img src="zee24.png" alt="">
+                </a></div>
+                <h3>Zee 24 News</h3>
+                <span>Kolkata News</span>
+            </div>
+            <!-- box-10  -->
+            <div class="box">
+                <div class="box-img">
+                	<a href="">
+                    <img src="zoom.png" alt="">
+                </a></div>
+                <h3>Zoom</h3>
+                <span>Music</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- coming  -->
+    <section class="coming" id="coming">
+        <h2 class="heading">Coming Soon</h2>
+        <!-- coming contanier  -->
+        <div class="coming-container swiper">
+            <div class="swiper-wrapper">
+                <!-- box-1  -->
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="starjalsha.png" alt="">
+                    </div>
+                    <h3>Star Jalsha</h3>
+                </div>
+                <!-- box-2  -->
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="zeebangla.png" alt="">
+                    </div>
+                    <h3>Zee Bangla</h3>
+                </div>
+                <!-- box-3  -->
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="sonymax.png" alt="">
+                    </div>
+                    <h3>Sony Max HD</h3>
+                </div>
+                <!-- box-4  -->
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="nick.png" alt="">
+                    </div>
+                    <h3>Nick</h3>
+                </div>
+                <!-- box-5  -->
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="sonic.jpg" alt="">
+                    </div>
+                    <h3>Sonic</h3>
+                </div>
+                <!-- box-6  -->
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="jalshamovie.png" alt="">
+                    </div>
+                    <h3>Jalsha Movies</h3>
+                </div>
+                <!-- box-7 -->
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="starplus.png" alt="">
+                    </div>
+                    <h3>Star Plus HD</h3>
+                </div>
+                <!-- box-8  -->
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="zeecinema.jpg" alt="">
+                    </div>
+                    <h3>Zee Cinema</h3>
+                </div>
+                <!-- box-9  -->
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="stargold.png" alt="">
+                    </div>
+                    <h3>Star Gold HD</h3>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- footer  -->
+    <section class="footer">
+        <a href="index" class="logo">
+            <i class="bx bxs-movie"></i>BDIX Online TV
+        </a>
+        <div class="social">
+            <a href="https://www.facebook.com/ajashik.27445?mibextid=ZbWKwL"><i class='bx bxl-facebook'></i></a>
+            
+            <a href="https://www.instagram.com/ajashik.27445?igsh=bGhpYnF6ZGRqejB5"><i class='bx bxl-instagram'></i></a>
+        </div>
+    </section>
+
+    <!-- Copyright  -->
+    <div class="copyright">
+        <p>Copyright &copy; BDIX Online TV 2024. All Right Reserved</p>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="vv.js"></script>
+</body>
+<script>
+	let header = document.querySelector('header');
+
+window.addEventListener('scroll', () =>{
+    header.classList.toggle('shadow', window.scrollY > 0);
+});
+
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menu.onclick = () =>{
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+}
+window.onscroll = () =>{
+    menu.classList.remove('bx-x');
+    navbar.classList.remove('active');
+}
+
+
+var swiper = new Swiper(".home", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+var swiper = new Swiper(".coming-container", {
+    spaceBetween: 20,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 2,
+        },
+        568: {
+            slidesPerView: 3,
+        },
+        768: {
+            slidesPerView: 4,
+        },
+        968: {
+            slidesPerView: 5,
+        },
+
+    }
+  });
+	</script>
+</html>
